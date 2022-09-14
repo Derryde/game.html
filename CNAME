@@ -35,3 +35,5 @@ function handleMove(evt) {
   ...
   // Visualize all state
   render();
+  }
+<script defer src="js/main.js"></script>
