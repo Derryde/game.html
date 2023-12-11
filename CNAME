@@ -1,39 +1,51 @@
-monkindgame.github
-# game.html
-developing a game
-let lose = numGuesses > 5;
-let lose = numGuesses > MAX_GUESSES;
-const players = {
-  '1': {
-    name: '',
-    score: 0
-  },
-  '-1': {
-    name: '',
-    score: 0
-  }
-};
-// Check for winner
-let winner = checkBoardForWinner();
-if (winner) return winner;
-// There's no winner, so
-// check for tie - board still contains null(s)
-return board.includes(null) ? null : 'Tie';
-function render() {
-  renderBoard();
-  renderScores();
-  renderControls();
-  renderMessages();
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-function handleMove(evt) {
-  // Check if we should exit the function
-  // according to the current state
-  // For example, ignore clicks if the
-  // game has been won or is a tie:
-  if (winner) return;
-  // Logic/Code to update all impacted state
-  ...
-  // Visualize all state
-  render();
-  }
-<script defer src="js/main.js"></script>
+
+.calculator-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result-container {
+    margin-top: 20px;
+}
+
+#carbon-footprint {
+    font-size: 18px;
+}
+
